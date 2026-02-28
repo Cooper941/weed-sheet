@@ -4,20 +4,6 @@ SR "author=Cooper, NiV-L-A & zami3333\n"
 
 Set mapID 003E8910
 
-IF 3DB180 =. 3 // if not in a loading screen
-    WP32 3E16B8,38 1 // disable gang healthbar
-    WP32 3E16B8,40 1 //
-    WPF 3E16B8,5C 1 //
-    WP32 3E16B8,60 1 //
-    WP32 3E16B8,64 1 //
-    WPF 3E16B8,68 1 //
-    WP32 3E16B8,70 1 //
-
-    W32 3DC2B0 1 // set gang hp to 1
-    W32 3DC2C8 1 //
-    W32 3DC2E0 1 //
-EI
-
 // hp fixes
 IF 3DC2B0 >. 1
     W32 3DC2B0 1
@@ -66,4 +52,3 @@ EI
 IF mapID =. 0x26 // blimp
     W32 516940 0 // carmgunner chopper hp
 EI
-
